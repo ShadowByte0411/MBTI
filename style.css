@@ -1,0 +1,112 @@
+/* --- Google Font Import --- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap');
+
+/* --- Red, Black & White Color Palette --- */
+:root {
+    --primary-font: 'Lato', sans-serif;
+    --title-font: 'Playfair Display', serif;
+    --primary-color: #c62828; /* Strong Red */
+    --primary-darker: #b71c1c; /* Darker Red for Hover */
+    --background-color: #f5f5f5; /* Off-White */
+    --card-background: #ffffff;
+    --text-color: #212121; /* Black */
+    --subtle-text: #757575; /* Medium Gray */
+    --border-color: #eeeeee; /* Light Gray */
+    --shadow: 0 10px 40px -15px rgba(0, 0, 0, 0.2);
+}
+
+/* --- General Body & Layout --- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: var(--primary-font);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+.quiz-container {
+    background: var(--card-background);
+    width: 100%;
+    max-width: 750px;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    padding: 40px 50px;
+    border-top: 5px solid var(--primary-color);
+    overflow: hidden;
+}
+
+/* --- Logo Styles for inline position --- */
+.title .inline-logo {
+    vertical-align: middle;
+    margin-right: 10px;
+    stroke: var(--text-color);
+}
+.title .logo-path-1 { stroke: var(--primary-color); }
+.title .logo-path-2 { stroke: var(--subtle-text); }
+.title .logo-path-3 { stroke: var(--text-color); }
+
+
+/* --- Screen Management --- */
+.screen { display: none; animation: fadeIn 0.5s ease-in-out; }
+.screen.active { display: block; }
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Typography --- */
+.title { font-family: var(--title-font); font-size: 2.8rem; text-align: center; margin-bottom: 10px; color: var(--text-color); }
+.subtitle { text-align: center; color: var(--subtle-text); margin-bottom: 35px; font-size: 1.1rem; line-height: 1.6; }
+
+/* --- Buttons & Inputs --- */
+.btn { display: block; width: 100%; padding: 16px; border: none; border-radius: 8px; font-size: 1.1rem; font-weight: 700; font-family: var(--primary-font); cursor: pointer; transition: all 0.3s ease; }
+.btn-primary { background: var(--primary-color); color: white; }
+.btn-primary:hover { background: var(--primary-darker); transform: translateY(-3px); box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); }
+.input-field { width: 100%; padding: 16px; border: 1px solid var(--border-color); border-radius: 8px; font-size: 1rem; font-family: var(--primary-font); margin-bottom: 20px; transition: border-color 0.3s, box-shadow 0.3s; }
+.input-field:focus { outline: none; border-color: var(--primary-color); box-shadow: 0 0 0 3px rgba(198, 40, 40, 0.2); }
+
+/* --- Menu Screen --- */
+.menu-options { display: flex; flex-direction: column; gap: 15px; }
+.menu-btn { background: var(--card-background); color: var(--text-color); border: 2px solid var(--border-color); border-radius: 8px; padding: 18px; text-align: center; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: all 0.3s ease; }
+.menu-btn:hover { border-color: var(--primary-color); color: var(--primary-color); transform: translateY(-2px); }
+
+/* --- Test Screen --- */
+.test-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.btn-back { background: none; border: none; color: var(--subtle-text); font-size: 1rem; font-weight: 600; cursor: pointer; padding: 5px; transition: all 0.3s ease; }
+.btn-back:hover { color: var(--primary-color); transform: translateX(-3px); }
+.progress-text { color: var(--subtle-text); font-weight: 600; }
+.progress-bar-container { width: 100%; height: 8px; background-color: var(--border-color); border-radius: 4px; margin-bottom: 40px; }
+.progress-bar { width: 0%; height: 100%; background: var(--primary-color); border-radius: 4px; transition: width 0.4s ease-in-out; }
+.question-text { font-family: var(--title-font); font-size: 1.8rem; margin-bottom: 30px; text-align: center; min-height: 80px; }
+.answer-options { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.answer-btn { background: white; border: 2px solid var(--border-color); padding: 20px; font-size: 1rem; font-family: var(--primary-font); line-height: 1.5; border-radius: 8px; cursor: pointer; transition: all 0.2s ease; min-height: 80px; }
+.answer-btn:hover { border-color: var(--primary-color); }
+.answer-btn.selected { background: var(--primary-color); border-color: var(--primary-color); color: white; }
+
+/* --- Results & All Types Screens --- */
+.result-header { text-align: center; }
+.screen-header { text-align: center; margin-bottom: 20px; }
+.personality-type { font-family: var(--title-font); font-size: 4rem; color: var(--primary-color); }
+.personality-name { font-size: 1.75rem; color: var(--subtle-text); font-weight: 400; font-style: italic; margin-top: -10px; margin-bottom: 30px; }
+.info-section { text-align: left; margin-bottom: 25px; }
+.info-section h3 { font-family: var(--title-font); font-size: 1.4rem; margin-bottom: 15px; border-bottom: 1px solid var(--border-color); padding-bottom: 10px; }
+.info-section[data-section="strengths"] h3::before { content: '★'; margin-right: 10px; color: #2E7D32; }
+.info-section[data-section="weaknesses"] h3::before { content: '❗'; margin-right: 10px; color: #c62828; }
+.info-section[data-section="careers"] h3::before { content: '💼'; margin-right: 10px; color: #0277BD; }
+.info-section ul { list-style: none; padding-left: 5px; }
+.info-section li { padding: 5px 0; line-height: 1.7; }
+.all-types-container, .history-container { max-height: 450px; overflow-y: auto; padding-right: 15px; margin-top: 20px; }
+.type-card, .history-card { background: #fdfdfd; border: 1px solid var(--border-color); border-radius: 12px; padding: 25px; margin-bottom: 20px; }
+.type-card h3 { font-family: var(--title-font); }
+.type-card ul { list-style: none; padding-left: 5px; margin-top: 10px; }
+
+/* --- History Screen --- */
+.history-card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.history-type { font-family: var(--title-font); font-size: 1.8rem; color: var(--primary-color); }
+.history-date { font-size: 0.9rem; color: var(--subtle-text); }
+.history-name { font-weight: 600; }
+.btn-secondary, #clear-history-btn { background: var(--text-color); color: white; }
+.btn-secondary:hover, #clear-history-btn:hover { background: #000000; }

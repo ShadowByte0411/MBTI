@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MBTI Personality Profiler</title>
+    <link rel="icon" href="logo.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="quiz-container">
+
+        <div id="welcome-screen" class="screen active">
+            <h1 class="title">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline-logo">
+                    <path d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="logo-path-1"/>
+                    <path d="M12 2V22" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="logo-path-2"/>
+                    <path d="M4.92969 4.92969C9.21319 9.21319 14.7868 9.21319 19.0703 4.92969" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="logo-path-3"/>
+                    <path d="M4.92969 19.0703C9.21319 14.7868 14.7868 14.7868 19.0703 19.0703" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="logo-path-3"/>
+                </svg>
+                Welcome
+            </h1>
+            <p class="subtitle">Discover your true self. Please enter your name to begin the assessment.</p>
+            <input type="text" id="name-input" placeholder="Enter your name here..." class="input-field">
+            <button id="start-btn" class="btn btn-primary">Start</button>
+        </div>
+
+        <div id="menu-screen" class="screen">
+            <h1 id="menu-greeting" class="title">Main Menu</h1>
+            <p class="subtitle">What would you like to do?</p>
+            <div class="menu-options">
+                <button class="menu-btn" data-target="test-screen">Start New Assessment</button>
+                <button class="menu-btn" data-target="history-screen">View Your History</button>
+                <button class="menu-btn" data-target="types-screen">Explore All Personality Types</button>
+            </div>
+        </div>
+
+        <div id="test-screen" class="screen">
+            <div class="test-header">
+                <button class="btn-back" data-target="menu-screen">Back to Menu</button>
+                <p id="progress-text" class="progress-text">Question 1 / 8</p>
+            </div>
+            <div class="progress-bar-container">
+                <div id="progress-bar" class="progress-bar"></div>
+            </div>
+            <div id="question-container">
+                <h2 id="question-text" class="question-text"></h2>
+                <div class="answer-options">
+                    <button class="answer-btn" data-option="0"></button>
+                    <button class="answer-btn" data-option="1"></button>
+                </div>
+            </div>
+        </div>
+
+        <div id="results-screen" class="screen">
+            <div class="result-header">
+                <p>Your Personality Type Is:</p>
+                <h1 id="personality-type" class="personality-type"></h1>
+                <h2 id="personality-name" class="personality-name"></h2>
+            </div>
+            <div id="result-details-container" class="result-details"></div>
+            <button class="btn btn-primary" data-target="menu-screen">Back to Menu</button>
+        </div>
+
+        <div id="types-screen" class="screen">
+            <div class="screen-header">
+                <button class="btn-back" data-target="menu-screen">Back to Menu</button>
+                <h1 class="title">The 16 Personality Types</h1>
+            </div>
+            <div id="all-types-container" class="all-types-container"></div>
+        </div>
+        
+        <div id="history-screen" class="screen">
+             <div class="screen-header">
+                <button class="btn-back" data-target="menu-screen">Back to Menu</button>
+                <h1 class="title">Your Assessment History</h1>
+            </div>
+            <div id="history-container" class="history-container"></div>
+             <button id="clear-history-btn" class="btn btn-secondary">Clear History</button>
+        </div>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
