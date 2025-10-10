@@ -12,10 +12,3 @@ A sleek and modern web application for determining one's Myers-Briggs Type Indic
 Technologies Used
   * **Frontend:** HTML5, CSS3, JavaScript (ES6)
   * **Fonts:** Google Fonts (Playfair Display & Lato)
-
-File Structure
-The project is organized into four simple files:
-├── index.html      # The main HTML file with all screen structures.
-├── style.css       # The complete stylesheet for visual design and layout.
-├── script.js       # The core application logic, handling the quiz, scoring, and history.
-└── logo.svg        # The SVG icon used for the inline logo and browser favicon.
