@@ -12,3 +12,4 @@ A sleek and modern web application for determining one's Myers-Briggs Type Indic
 Technologies Used
   * **Frontend:** HTML5, CSS3, JavaScript (ES6)
   * **Fonts:** Google Fonts (Playfair Display & Lato)
+Video: https://youtu.be/BY5JFEsKDjc
