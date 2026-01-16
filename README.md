@@ -1,7 +1,6 @@
 # MBTI
 A sleek and modern web application for determining one's Myers-Briggs Type Indicator (MBTI) personality type. Built with vanilla HTML, CSS, and JavaScript, this project provides a user-friendly quiz experience, detailed results, and local history tracking, all wrapped in a polished, responsive interface.
 
-
   * Interactive Quiz: A carefully designed 8-question assessment to determine a user's personality type across the four MBTI dichotomies.
   * Detailed Results: The results screen provides a comprehensive breakdown, including the personality type, its title, key **Strengths**, potential **Weaknesses**, and a list of Ideal Career Paths.
   * Clean, Modern UI: A responsive, single-page application design featuring a high-contrast red, black, and white theme with professional typography.
@@ -10,6 +9,6 @@ A sleek and modern web application for determining one's Myers-Briggs Type Indic
   * User-Friendly Experience: Features like a personalized welcome, automatic progression through questions, and keyboard submission enhance usability.
 
 Technologies Used
-  * **Frontend:** HTML5, CSS3, JavaScript (ES6)
-  * **Fonts:** Google Fonts (Playfair Display & Lato)
+  * **Frontend:** HTML5, CSS, JavaScript 
+ 
 Video: https://youtu.be/BY5JFEsKDjc
