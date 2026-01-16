@@ -9,6 +9,6 @@ A sleek and modern web application for determining one's Myers-Briggs Type Indic
   * User-Friendly Experience: Features like a personalized welcome, automatic progression through questions, and keyboard submission enhance usability.
 
 Technologies Used
-  * **Frontend:** HTML5, CSS, JavaScript 
+  * **Frontend:** HTML, CSS, JavaScript 
  
 Video: https://youtu.be/BY5JFEsKDjc
